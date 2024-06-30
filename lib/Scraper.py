@@ -5,4 +5,16 @@ import ipdb
 
 
 class Scraper:
-    pass
+    def __init__(self):
+        self.course = []
+
+    def get_page(self):
+        doc = BeautifulSoup(
+            requests.get(
+                "http://learn-co-curriculum.github.io/site-for-scraping/courses"
+            ).text,
+            'html.parser'
+        )
+        ipdb.set_trace()
+
+Scraper.get_page()
